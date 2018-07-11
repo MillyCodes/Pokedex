@@ -23,6 +23,7 @@ class Pokemon{
         this.abilities = abilities;
     }
 }
+
 // create trainer
 let milly = new Trainer();
 // add pokemon
