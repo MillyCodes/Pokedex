@@ -1,4 +1,4 @@
-// define trainer
+// define trainer class
 class Trainer{
     constructor(name){
       this.name = name;
@@ -14,27 +14,28 @@ class Trainer{
         this.myPokemonList.push(this.pokemon)
     }
 }
-// define pokemon
+
+// define pokemon class
 class Pokemon{
-    constructor(name, hp,defense,abilities){
+    constructor(name,hp,defense,abilities){
         this.name = name;
         this.hp = hp;
         this.defense = defense;
         this.abilities = abilities;
     }
 }
-// create trainer
+// create new instance of trainer class here
 let milly = new Trainer();
-// add pokemon
+// create new instance of pokemon class here
 let charmeleon = new Pokemon('Charmeleon', 70, 78,['flame', 'burn']);
 let vulpix = new Pokemon('Vulpix', 50, 81,['water','blow'] );
 let slowpoke = new Pokemon('Slowpoke', 40, 62, ['flame', 'burn']);
-// add pokemon to trainer
+// add created pokemon to the trainer created here
 milly.add(charmeleon);
 milly.add(vulpix);
 milly.add(slowpoke);    
-
-// test trainer methods
+// test trainer.all() method here
 milly.all();
+// test Trainer.get() method here
 milly.get(vulpix);
 milly.get(charmeleon);
