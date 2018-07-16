@@ -5,6 +5,7 @@ class Trainer{
         this.myPokemonList = {}
         }
         add(pokemonObject){
+
             // adds the pokemon object to the trainer's container object for all his pokemon
             this.myPokemonList[pokemonObject.name] = pokemonObject
         }
@@ -109,3 +110,21 @@ axios.get('https://pokeapi.co/api/v2/pokemon/79/').then((poke) => {
 
 console.log(pokeCounter);
 
+
+
+let pokemonId
+axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemonID}/`).then((poke) => {
+        // console.log(poke);
+        let pokedata  = poke.data;
+        let name = pokedata.name;
+        let hp = pokedata.stats[5].base_stat
+        let attack = pokedata.stats[4].base_stat;
+        let defense = pokedata.stats[3].base_stat;
+        let abilities = pokedata.abilities.map(   (element) => element.ability.name);
+        let sprite = pokedata.sprites.front_default;
+
+        let newPoke = new Pokemon(name,hp,attack,defense,abilities,sprite)
+        // milly.add(charmeleon);
+        // pokeCounter.push(charmeleon);
+
+})
