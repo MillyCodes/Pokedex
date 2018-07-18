@@ -1,5 +1,57 @@
+<<<<<<< HEAD
 div {
     p {
         color: red;
     }
 }
+=======
+// @import 'colors';
+// @import 'header';
+@import 'mixins';
+// @import 'placeholders';
+
+  
+
+#trainer-container{
+background-color: brown;
+width:300px;
+}
+
+
+@mixin box-shadow($value, $color){
+    box-shadow: repeat(3, $value) $color
+}
+
+%font-and-family {
+    font-family: Raleway, sans-serif;
+    font-size: 12px
+}
+
+$cyan: cyan;
+$blue: blue;
+$grey: grey;
+
+.thin-shadow {
+    @include box-shadow(1px, black)
+  }
+  
+  table td {
+    @extend %font-and-family;
+    color: $grey;
+    border-radius: 2px;
+    border: 1px solid $blue;
+    
+  }
+  
+  h4 {
+    @extend %font-and-family;
+    color: $cyan;
+  }
+  
+  .strong-shadow {
+    @include box-shadow(3px, black);
+  }
+
+/* comment */
+
+>>>>>>> master
