@@ -1,15 +1,13 @@
 @mixin rounded-corner($radius) {
-    -moz-border-radius: $radius;
-    -webkit-border-radius: $radius;
-    border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
 }
-
-@mixin box-shadow(){
-        border: 1px solid;
-        padding: 10px;
-        box-shadow: 6px 13px rgba(136, 136, 136, .3);
-        
+@mixin box-shadow() {
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 6px 13px rgba(136, 136, 136, .3);
 }
-@mixin apply-height-times100($height){
-    height: 100 * $height;
+@mixin apply-height-times100($height) {
+  height: 100 * $height;
 }

@@ -1,38 +1,33 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,700');
 $text-center: center;
-
 // @import 'colors';
 $red: #ee1515;
 $white: white;
 $grey: #f0f0f0;
 $black: #222224;
 $green: #66A612;
-
-
 // @import 'header';
-@import 'mixins';
-// @import 'placeholders';
-
-
+@import 'mixins'; // @import 'placeholders';
 
 body {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   font-family: 'Montserrat', sans-serif;
   background: url("img/pokebg.png") no-repeat center center fixed;
 }
 
-header{
-  padding: 1% 1% 0%;
-  margin: 0px;
+header {
+  padding: 1% 1% 0;
+  margin: 0;
   background-color: $red;
   border-bottom: 10px solid #000;
-    h1{
-      color: $white;
-    }
+
+  h1 {
+    color: $white;
+  }
 }
 
-#pokemon-container{ 
+#pokemon-container {
   padding-top: 2%;
   padding-bottom: 3%;
   max-width: 90%;
@@ -44,11 +39,11 @@ header{
   font-size: 16px;
 }
 
-#trainer{
+#trainer {
   text-align: center;
 }
 
-#trainer-card{
+#trainer-card {
   margin: 1%;
   padding: 30px;
   width: 600px;
@@ -56,12 +51,13 @@ header{
   @include box-shadow();
   background-color: $white;
   border: 1px solid $red;
-  img{
+
+  img {
     max-width: 150%;
   }
 }
 
-.pokemon-cards{
+.pokemon-cards {
   width: 27%;
   margin: 1%;
   padding-bottom: 0;
@@ -71,26 +67,24 @@ header{
   background-color: $white;
   border: 1px solid $red;
   // opacity: .6;
+  &:hover {
+    opacity: 1;
+  }
 
-        &:hover{
-                opacity: 1;
-            
-        }
-        img{
-          max-width: 96px;
-        }
-         
+  img {
+    max-width: 96px;
+  }
 }
-.stats{
-            font-weight: 500;
-          }
-footer{
+
+.stats {
+  font-weight: 500;
+}
+
+footer {
   color: $white;
   padding: 1%;
-  margin: 0px;
+  margin: 0;
   text-align: $text-center;
   background-color: $green;
 }
-
-
 /* comment */

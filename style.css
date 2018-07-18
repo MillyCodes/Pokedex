@@ -2,15 +2,19 @@
 body {
   margin: 0px;
   padding: 0px;
-  font-family: 'Montserrat', sans-serif; }
+  font-family: 'Montserrat', sans-serif;
+}
 
 header {
   padding: 1% 1% 0%;
   margin: 0px;
   background-color: #ee1515;
-  border-bottom: 10px solid #000; }
-  header h1 {
-    color: white; }
+  border-bottom: 10px solid #000;
+}
+
+header h1 {
+  color: white;
+}
 
 #pokemon-container {
   overflow: hidden;
@@ -24,7 +28,8 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
-  font-size: 16px; }
+  font-size: 16px;
+}
 
 .pokemon-cards {
   width: 27%;
@@ -39,21 +44,28 @@ header {
   padding: 10px;
   box-shadow: 6px 13px rgba(136, 136, 136, 0.3);
   background-color: white;
-  border: 1px solid #ee1515; }
-  .pokemon-cards:hover {
-    opacity: 1; }
-  .pokemon-cards img {
-    max-width: 96px; }
+  border: 1px solid #ee1515;
+}
+
+.pokemon-cards:hover {
+  opacity: 1;
+}
+
+.pokemon-cards img {
+  max-width: 96px;
+}
 
 .stats {
-  font-weight: 500; }
+  font-weight: 500;
+}
 
 footer {
   color: white;
   padding: 1%;
   margin: 0px;
   text-align: center;
-  background-color: #66A612; }
+  background-color: #66A612;
+}
 
 /* comment */
 
