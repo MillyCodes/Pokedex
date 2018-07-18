@@ -1,49 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,700');
+$text-center: center;
+
 // @import 'colors';
+$red: #ee1515;
+$white: white;
+$grey: #f0f0f0;
+$black: #222224;
+$green: #66A612;
+
+
 // @import 'header';
 @import 'mixins';
 // @import 'placeholders';
 
-  
 
-#trainer-container{
-background-color: brown;
-width:300px;
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Montserrat', sans-serif;
+  background: url("img/pokebg.png") no-repeat center center fixed;
 }
 
-
-@mixin box-shadow($value, $color){
-    box-shadow: repeat(3, $value) $color
+header{
+  padding: 1% 1% 0%;
+  margin: 0px;
+  background-color: $red;
+  border-bottom: 10px solid #000;
+    h1{
+      color: $white;
+    }
 }
 
-%font-and-family {
-    font-family: Raleway, sans-serif;
-    font-size: 12px
+#pokemon-container{ 
+  padding-top: 2%;
+  padding-bottom: 3%;
+  max-width: 90%;
+  min-height: 700px;
+  // display: flex;
+  // flex-wrap: wrap;
+  justify-content: center;
+  text-align: $text-center;
+  font-size: 16px;
 }
 
-$cyan: cyan;
-$blue: blue;
-$grey: grey;
+#trainer{
+  text-align: center;
+}
 
-.thin-shadow {
-    @include box-shadow(1px, black)
+#trainer-card{
+  margin: 1%;
+  padding: 30px;
+  width: 600px;
+  @include rounded-corner(5px);
+  @include box-shadow();
+  background-color: $white;
+  border: 1px solid $red;
+  img{
+    max-width: 150%;
   }
-  
-  table td {
-    @extend %font-and-family;
-    color: $grey;
-    border-radius: 2px;
-    border: 1px solid $blue;
-    
-  }
-  
-  h4 {
-    @extend %font-and-family;
-    color: $cyan;
-  }
-  
-  .strong-shadow {
-    @include box-shadow(3px, black);
-  }
+}
+
+.pokemon-cards{
+  width: 27%;
+  margin: 1%;
+  padding-bottom: 0;
+  max-width: 250px;
+  @include rounded-corner(5px);
+  @include box-shadow();
+  background-color: $white;
+  border: 1px solid $red;
+  // opacity: .6;
+
+        &:hover{
+                opacity: 1;
+            
+        }
+        img{
+          max-width: 96px;
+        }
+         
+}
+.stats{
+            font-weight: 500;
+          }
+footer{
+  color: $white;
+  padding: 1%;
+  margin: 0px;
+  text-align: $text-center;
+  background-color: $green;
+}
+
 
 /* comment */
-

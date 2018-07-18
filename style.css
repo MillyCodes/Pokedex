@@ -1,26 +1,60 @@
-#trainer-container {
-  background-color: brown;
-  width: 300px; }
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,700");
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Montserrat', sans-serif; }
 
-table td, h4 {
-  font-family: Raleway, sans-serif;
-  font-size: 12px; }
+header {
+  padding: 1% 1% 0%;
+  margin: 0px;
+  background-color: #ee1515;
+  border-bottom: 10px solid #000; }
+  header h1 {
+    color: white; }
 
-.thin-shadow {
-  box-shadow: repeat(3, 1px) black; }
+#pokemon-container {
+  overflow: hidden;
+  background: url("img/pokebg.png") no-repeat center center fixed;
+  padding-top: 2%;
+  padding-bottom: 3%;
+  max-width: 100%;
+  min-height: 700px;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  font-size: 16px; }
 
-table td {
-  color: grey;
-  border-radius: 2px;
-  border: 1px solid blue; }
+.pokemon-cards {
+  width: 27%;
+  margin: 1%;
+  padding-bottom: 0;
+  max-width: 250px;
+  height: 0%;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 6px 13px rgba(136, 136, 136, 0.3);
+  background-color: white;
+  border: 1px solid #ee1515; }
+  .pokemon-cards:hover {
+    opacity: 1; }
+  .pokemon-cards img {
+    max-width: 96px; }
 
-h4 {
-  color: cyan; }
+.stats {
+  font-weight: 500; }
 
-.strong-shadow {
-  box-shadow: repeat(3, 3px) black; }
+footer {
+  color: white;
+  padding: 1%;
+  margin: 0px;
+  text-align: center;
+  background-color: #66A612; }
 
 /* comment */
 
 /*# sourceMappingURL=style.css.map */
-
