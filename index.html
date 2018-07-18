@@ -23,12 +23,8 @@
 
 <div id="pokemon-container">
   <!-- pokemon trainer card -->
-  <div id="trainer" style="width: 80%;">
+  <div id="trainer" class="w-50">
   <div id="trainer-card" class="w-100">
-      
-      <div class="card-header">
-        Trainer: Name
-      </div>
     <img class="img" src="http://orig00.deviantart.net/07e1/f/2015/206/8/2/pokemon_trainer_ash_by_ravenide-d92ufqi.png">
           <!-- <div class="card card-body">
             <p>Abilities:</p>
@@ -37,18 +33,22 @@
             <p>Abilities:</p>
 
           </div> -->
+          <div class="card-footer">
+              Trainer: Name
+            </div>
         </div>
         </div>
+        <div id="pokemonbar" class="w-100">
 
           <!-- this is where all the pokemon will show on the page -->
         
-      </div>
+      </div></div>
 
     <!-- The #each helper iterates over an array of items. -->
     <script id="pokemon-template" type="text/x-handlebars-template">
     
       {{#each content}}
-        <div class="pokemon-cards animated zoomIn w-75">
+        <div class="pokemon-cards animated zoomIn">
           <div class="card-header">
             {{this.name}}
           </div>
