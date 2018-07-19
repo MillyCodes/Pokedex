@@ -1,41 +1,46 @@
-// // define trainer class
-// class Trainer{
-//     constructor(name){
-//       this.name = name;
-//         this.myPokemonList = []
-//     }
-//     all(pokemon){
-//         console.log(this.myPokemonList);
-//     }
-//     get(pokemon){
-//         console.log(pokemon);
-//     }
-//     add(pokemon){
-//         this.myPokemonList.push(this.pokemon)
-//     }
-// }
+// define pokemon class
+class Pokemon {
+    constructor(name, hp, attack, defense, abilities, sprite) {
+        this.name = name;
+        this.hp = hp;
+        this.attack = attack;
+        this.defense = defense;
+        this.abilities = abilities;
+        this.sprite = sprite;
+    }
+}
 
-// // define pokemon class
-// class Pokemon{
-//     constructor(name,hp,defense,abilities){
-//         this.name = name;
-//         this.hp = hp;
-//         this.defense = defense;
-//         this.abilities = abilities;
-//     }
-// }
-// // create new instance of trainer class here
-// let milly = new Trainer();
-// // create new instance of pokemon class here
-// let charmeleon = new Pokemon('Charmeleon', 70, 78,['flame', 'burn']);
-// let vulpix = new Pokemon('Vulpix', 50, 81,['water','blow'] );
-// let slowpoke = new Pokemon('Slowpoke', 40, 62, ['flame', 'burn']);
-// // add created pokemon to the trainer created here
-// milly.add(charmeleon);
-// milly.add(vulpix);
-// milly.add(slowpoke);    
-// // test trainer.all() method here
-// milly.all();
-// // test Trainer.get() method here
-// milly.get(vulpix);
-// milly.get(charmeleon);
+// define trainer class
+class Trainer {
+    constructor(name) {
+        this.name = name;
+        this.myPokemonList = {}
+    }
+    add(pokemonID) {
+        // return axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemonID}/`).then((poke) => {
+        return axios.get(`https://pokeapi-nycda.firebaseio.com/pokemon/${pokemonID}.json`).then((poke) => {
+
+            let pokedata = poke.data;
+            console.log(pokedata);
+            let name = pokedata.name;
+            let hp = pokedata.stats[5].base_stat
+            let attack = pokedata.stats[4].base_stat;
+            let defense = pokedata.stats[3].base_stat;
+            let abilities = pokedata.abilities.map((element) => element.ability.name);
+            let sprite = pokedata.sprites.front_default;
+            let newPoke = new Pokemon(name, hp, attack, defense, abilities, sprite)
+            console.log(`${pokemonID} added sucessfully`);
+            console.log(newPoke)
+            this.myPokemonList[newPoke.name] = newPoke
+
+        });
+    }
+    get(pokemon) {
+        return this.myPokemonList[pokemon];
+    }
+    all() {
+        // no parameters/returns an array of Pokemon objects
+        console.log(this.myPokemonList);
+        console.log(Object.values(this.myPokemonList))
+    }
+}
