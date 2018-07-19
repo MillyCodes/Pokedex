@@ -11,15 +11,18 @@
 </head>
 
 <body>
+  <!-- wrapper -->
   <div id="wrapper">
+    <!-- header -->
     <header>
       <div>
       <!-- header animation -->
         <h1 class="animated fadeInLeft">POKEDEX <img src="img/pikachu-kaloscap.gif" alt="PIKA PIKA!"></h1>
       </div>
     </header>
+    <!-- header -->
 
-
+    <!-- pokemon-container -->
     <div id="pokemon-container">
         <!-- pokemon trainer card -->
         <div id="trainer" class="w-50">
@@ -36,8 +39,9 @@
           <!-- this is where all the pokemon will show on the page -->
         </div>
     </div>
+    <!-- pokemon-container -->
 
-    <!-- The #each helper iterates over an array of items. -->
+    <!-- Handlebar - The #each helper iterates over an array of items. -->
     <script id="pokemon-template" type="text/x-handlebars-template">
     
       {{#each content}}
@@ -45,9 +49,9 @@
           <div class="card-header text-uppercase">
             {{this.name}}
           </div>
-        <img class="img" src="{{this.sprite}}" alt="{{this.name}}">
+        <img class="img animated infinite pulse" src="{{this.sprite}}" alt="{{this.name}}">
         
-        <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapseExample{{this.name}}" aria-expanded="false" aria-controls="collapseExample{{this.name}}">
+        <button class="btn btn-success animated infinite pulse" type="button" data-toggle="collapse" data-target="#collapseExample{{this.name}}" aria-expanded="false" aria-controls="collapseExample{{this.name}}">
             Choose me!
           </button>
           <div class="collapse" id="collapseExample{{this.name}}">
@@ -63,6 +67,7 @@
               
     {{/each}}
     </script>
+    <!-- closes handlebars -->
 
   <!-- Footer -->
 <footer class="page-footer font-small indigo">
@@ -76,7 +81,7 @@
         <!-- Grid column -->
         <div class="col-md-2 mb-3">
           <h6 class="text-uppercase font-weight-bold">
-              <a href="https://github.com/MillyCodes/Pokedex">About Me</a>
+              <a href="https://github.com/MillyCodes/">About Me</a>
           </h6>
         </div>
         <!-- Grid column -->
@@ -122,8 +127,8 @@
   <!-- Footer -->
        
 
-      <!-- this closes wrapper div with everything in it. -->
       </div>
+      <!-- Wrapper -->
     
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
