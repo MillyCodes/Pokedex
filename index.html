@@ -1,61 +1,54 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
+      <link rel="Shortcut icon" href="img/pokeballfavicon.ico">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <title>Pokedex!</title>
       <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
       <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-      <div id="wrapper">
+</head>
+
+<body>
+  <div id="wrapper">
+    <header>
+      <div>
+      <!-- header animation -->
+        <h1 class="animated fadeInLeft">POKEDEX <img src="http://www.pkparaiso.com/imagenes/sol-luna/sprites/animados/pikachu-kaloscap.gif" alt=""></h1>
+      </div>
+    </header>
 
 
-
-      <header>
-        <div>
-          <!-- header animation -->
-            <h1 class="animated fadeInLeftBig">POKEDEX</h1>
+    <div id="pokemon-container">
+        <!-- pokemon trainer card -->
+        <div id="trainer" class="w-50">
+          <div id="trainer-card" class="w-100">
+            <img class="img" src="img/trainer-sprite.png">
+                <div class="card-footer animated fadeInLeftBig">
+                  Trainer: Ishimaru Kazuma <br>
+                  <img src="http://www.pokestadium.com/assets/img/tools/trainercard/badges/3.png" alt=""> <br>
+                  Violet City, Johto
+                </div>
+            </div>
           </div>
-        </header>
-
-
-<div id="pokemon-container">
-  <!-- pokemon trainer card -->
-  <div id="trainer" style="width: 80%;">
-  <div id="trainer-card" class="w-100">
-      
-      <div class="card-header">
-        Trainer: Name
-      </div>
-    <img class="img" src="http://orig00.deviantart.net/07e1/f/2015/206/8/2/pokemon_trainer_ash_by_ravenide-d92ufqi.png">
-          <!-- <div class="card card-body">
-            <p>Abilities:</p>
-            <p>Abilities:</p>
-            <p>Abilities:</p>
-            <p>Abilities:</p>
-
-          </div> -->
-        </div>
-        </div>
-
+        <div id="pokemonbar" class="w-100" style="height: 1px">
           <!-- this is where all the pokemon will show on the page -->
-        
-      </div>
+        </div>
+    </div>
 
     <!-- The #each helper iterates over an array of items. -->
     <script id="pokemon-template" type="text/x-handlebars-template">
     
       {{#each content}}
-        <div class="pokemon-cards animated zoomIn w-75">
+        <div class="pokemon-cards animated zoomIn">
           <div class="card-header">
             {{this.name}}
           </div>
         <img class="img" src="{{this.sprite}}">
         
         <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapseExample{{this.name}}" aria-expanded="false" aria-controls="collapseExample{{this.name}}">
-            My stats
+            Choose me!
           </button>
           <div class="collapse" id="collapseExample{{this.name}}">
               <div class="card card-body">
@@ -70,9 +63,64 @@
               
     {{/each}}
     </script>
-    
-        <footer><h3>Pokedex footer</h3></footer>
 
+  <!-- Footer -->
+<footer class="page-footer font-small indigo">
+
+    <!-- Footer Links -->
+    <div class="container">
+
+      <!-- Grid row-->
+      <div class="row text-center d-flex justify-content-center pt-5 mb-3">
+
+        <!-- Grid column -->
+        <div class="col-md-2 mb-3">
+          <h6 class="text-uppercase font-weight-bold">
+              <a href="https://github.com/MillyCodes/Pokedex"> About Me</a>
+          </h6>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 mb-3">
+          <h6 class="text-uppercase font-weight-bold">
+            <a href="#!">PokeAPI</a>
+          </h6>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 mb-3">
+          <h6 class="text-uppercase font-weight-bold">
+            <a href="#!">Bootstrap</a>
+          </h6>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 mb-3">
+          <h6 class="text-uppercase font-weight-bold">
+            <a href="#!">Handlebars</a>
+          </h6>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 mb-3">
+          <h6 class="text-uppercase font-weight-bold">
+            <a href="#!">Sass</a>
+          </h6>
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row-->
+    </div>
+    <!-- Footer Links -->
+
+  </footer>
+  <!-- Footer -->
+       
 
       <!-- this closes wrapper div with everything in it. -->
       </div>

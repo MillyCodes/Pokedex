@@ -13,23 +13,37 @@ $green: #66A612;
 @import 'mixins';
 // @import 'placeholders';
 
-
+* {
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
+}
 
 body {
   margin: 0px;
   padding: 0px;
   font-family: 'Montserrat', sans-serif;
   background: url("img/pokebg.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 header{
   padding: 1% 1% 0%;
-  margin: 0px;
   background-color: $red;
   border-bottom: 10px solid #000;
-    h1{
-      color: $white;
-    }
+      h1{
+        color: $white;
+      }
+    
 }
 
 #pokemon-container{ 
@@ -44,27 +58,13 @@ header{
   font-size: 16px;
 }
 
-#trainer{
-  text-align: center;
+.trainer {
+  max-height: 275px;
 }
-
-#trainer-card{
-  margin: 1%;
-  padding: 30px;
-  width: 600px;
-  @include rounded-corner(5px);
-  @include box-shadow();
-  background-color: $white;
-  border: 1px solid $red;
-  img{
-    max-width: 150%;
-  }
-}
-
 .pokemon-cards{
   width: 27%;
-  margin: 1%;
-  padding-bottom: 0;
+  // margin: 1%;
+  // padding-bottom: 0;
   max-width: 250px;
   @include rounded-corner(5px);
   @include box-shadow();
@@ -90,6 +90,9 @@ footer{
   margin: 0px;
   text-align: $text-center;
   background-color: $green;
+  a{
+    text-decoration: none;
+  }
 }
 
 

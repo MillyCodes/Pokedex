@@ -51,9 +51,9 @@ let milly = new Trainer("milly");
 
 
 // Grab the template script
-var theTemplateScript = $("#pokemon-template").html();
+let theTemplateScript = $("#pokemon-template").html();
 // Compile the template
-var theTemplate = Handlebars.compile(theTemplateScript);
+let theTemplate = Handlebars.compile(theTemplateScript);
 
 
 Promise.all([
