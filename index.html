@@ -1,48 +1,41 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
+      <link rel="Shortcut icon" href="img/pokeballfavicon.ico">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <title>Pokedex!</title>
       <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
       <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-      <div id="wrapper">
+</head>
+
+<body>
+  <div id="wrapper">
+    <header>
+      <div>
+      <!-- header animation -->
+        <h1 class="animated fadeInLeft">POKEDEX <img src="http://www.pkparaiso.com/imagenes/sol-luna/sprites/animados/pikachu-kaloscap.gif" alt=""></h1>
+      </div>
+    </header>
 
 
-
-      <header>
-        <div>
-          <!-- header animation -->
-            <h1 class="animated fadeInLeftBig">POKEDEX</h1>
-          </div>
-        </header>
-
-
-<div id="pokemon-container">
-  <!-- pokemon trainer card -->
-  <div id="trainer" class="w-50">
-  <div id="trainer-card" class="w-100">
-    <img class="img" src="http://orig00.deviantart.net/07e1/f/2015/206/8/2/pokemon_trainer_ash_by_ravenide-d92ufqi.png">
-          <!-- <div class="card card-body">
-            <p>Abilities:</p>
-            <p>Abilities:</p>
-            <p>Abilities:</p>
-            <p>Abilities:</p>
-
-          </div> -->
-          <div class="card-footer animated fadeInLeftBig"">
-              Trainer: Ishimaru Kazuma
+    <div id="pokemon-container">
+        <!-- pokemon trainer card -->
+        <div id="trainer" class="w-50">
+          <div id="trainer-card" class="w-100">
+            <img class="img" src="img/trainer-sprite.png">
+                <div class="card-footer animated fadeInLeftBig">
+                  Trainer: Ishimaru Kazuma <br>
+                  Badges: <img src="http://www.pokestadium.com/assets/img/tools/trainercard/badges/3.png" alt=""> <br>
+                  Hometown: VIolet City, Johto
+                </div>
             </div>
-        </div>
-        </div>
-        <div id="pokemonbar" class="w-100">
-
+          </div>
+        <div id="pokemonbar" class="w-100" style="height: 1px">
           <!-- this is where all the pokemon will show on the page -->
-        
-      </div></div>
+        </div>
+    </div>
 
     <!-- The #each helper iterates over an array of items. -->
     <script id="pokemon-template" type="text/x-handlebars-template">
@@ -55,7 +48,7 @@
         <img class="img" src="{{this.sprite}}">
         
         <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapseExample{{this.name}}" aria-expanded="false" aria-controls="collapseExample{{this.name}}">
-            My stats
+            Choose me!
           </button>
           <div class="collapse" id="collapseExample{{this.name}}">
               <div class="card card-body">
@@ -71,7 +64,14 @@
     {{/each}}
     </script>
     
-        <footer><h3>Pokedex footer</h3></footer>
+        <footer>
+        <p>
+          <a href="#">contact me * </a> <a href="#">pokeapi * </a> <a href="#header">back to top </a> <img src="https://pokemon-trainer.com/images/sprite/xyorasani/108.gif" alt="">
+                      
+          <!-- <img src="https://pokemon-trainer.com/images/sprite/xyorasani/051.gif" alt="">  -->
+          <!-- <img src="https://pokemon-trainer.com/images/sprite/xyorasani/093.gif" alt="">  --> 
+          <!-- <img src="https://pokemon-trainer.com/images/sprite/xyorasani/025.gif" alt=""> -->
+        </p></footer>
 
 
       <!-- this closes wrapper div with everything in it. -->

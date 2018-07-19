@@ -13,7 +13,17 @@ $green: #66A612;
 @import 'mixins';
 // @import 'placeholders';
 
-
+* {
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
+}
 
 body {
   margin: 0px;
@@ -28,12 +38,12 @@ body {
 
 header{
   padding: 1% 1% 0%;
-  margin: 0px;
   background-color: $red;
   border-bottom: 10px solid #000;
-    h1{
-      color: $white;
-    }
+      h1{
+        color: $white;
+      }
+    
 }
 
 #pokemon-container{ 
@@ -48,7 +58,9 @@ header{
   font-size: 16px;
 }
 
-
+.trainer {
+  max-height: 275px;
+}
 .pokemon-cards{
   width: 27%;
   // margin: 1%;
@@ -78,6 +90,9 @@ footer{
   margin: 0px;
   text-align: $text-center;
   background-color: $green;
+  a{
+    text-decoration: none;
+  }
 }
 
 
