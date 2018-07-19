@@ -15,7 +15,7 @@
     <header>
       <div>
       <!-- header animation -->
-        <h1 class="animated fadeInLeft">POKEDEX <img src="img/pikachu-kaloscap.gif" alt=""></h1>
+        <h1 class="animated fadeInLeft">POKEDEX <img src="img/pikachu-kaloscap.gif" alt="PIKA PIKA!"></h1>
       </div>
     </header>
 
@@ -24,10 +24,10 @@
         <!-- pokemon trainer card -->
         <div id="trainer" class="w-50">
           <div id="trainer-card" class="w-100">
-            <img class="img" src="img/trainer-sprite.png">
+            <img class="img" src="img/trainer-sprite.png" alt="My trainer picture">
                 <div class="card-footer animated fadeInLeftBig">
                   Trainer: Ishimaru Kazuma <br>
-                  <img src="http://www.pokestadium.com/assets/img/tools/trainercard/badges/3.png" alt=""> <br>
+                  <img src="img/badges.png" alt="My badges"> <br>
                   Violet City, Johto
                 </div>
             </div>
@@ -42,20 +42,20 @@
     
       {{#each content}}
         <div class="pokemon-cards animated zoomIn">
-          <div class="card-header">
+          <div class="card-header text-uppercase">
             {{this.name}}
           </div>
-        <img class="img" src="{{this.sprite}}">
+        <img class="img" src="{{this.sprite}}" alt="{{this.name}}">
         
         <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapseExample{{this.name}}" aria-expanded="false" aria-controls="collapseExample{{this.name}}">
             Choose me!
           </button>
           <div class="collapse" id="collapseExample{{this.name}}">
               <div class="card card-body">
-                <p><b>HP:</b> {{this.hp}}</p>
-                <p><b>Attack:</b> {{this.attack}}</p>
-                <p><b>Defense:</b> {{this.defense}}</p>
-                <p><b>Abilities:</b> {{this.abilities}}</p>
+                <p>HP: {{this.hp}}</p>
+                <p>Attack: {{this.attack}}</p>
+                <p>Defense: {{this.defense}}</p>
+                <p>Abilities: {{this.abilities}}</p>
               </div>
             </div>
 
@@ -76,7 +76,7 @@
         <!-- Grid column -->
         <div class="col-md-2 mb-3">
           <h6 class="text-uppercase font-weight-bold">
-              <a href="https://github.com/MillyCodes/Pokedex"> About Me</a>
+              <a href="https://github.com/MillyCodes/Pokedex">About Me</a>
           </h6>
         </div>
         <!-- Grid column -->
