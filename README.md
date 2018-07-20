@@ -1,6 +1,6 @@
 # Pokédex
 
-A simple Pokédex built with React
+A simple Pokédex displaying a trainer and his 3 pokemon. This page was built to practice web development. Built with Javascript utilizing OOP, functions and API calls, SASS, Bootstrap, Handbars and the Pokemon API.
 
 ## LEGAL
 
