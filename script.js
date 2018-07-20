@@ -10,6 +10,10 @@ let theTemplateScript = $("#pokemon-template").html();
 let theTemplate = Handlebars.compile(theTemplateScript);
 
 
+// You can't render the data until you get the data. Promise.all() ensures
+// that all the promises that are passed to it have resolved.
+// so my code says: when milly.add(1), milly.add(2), milly.add(3) 
+// are all complete, THEN do the rendering stuff
 Promise.all([
   milly.add(5),
   milly.add(37),
@@ -24,7 +28,7 @@ function renderList(trainer){
     content: pokeList
   };
 
-  // Pass our data to the template
+  // Pass my data to the template
   const theCompiledHtml = theTemplate(context);
 
   // Add the compiled html to the page
