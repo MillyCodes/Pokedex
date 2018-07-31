@@ -17,8 +17,8 @@ class Trainer {
         this.myPokemonList = {}
     }
     add(pokemonID) {
-        // return axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemonID}/`).then((poke) => {
-        return axios.get(`https://pokeapi-nycda.firebaseio.com/pokemon/${pokemonID}.json`).then((poke) => {
+        return axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemonID}/`).then((poke) => {
+        //return axios.get(`https://pokeapi-nycda.firebaseio.com/pokemon/${pokemonID}.json`).then((poke) => {
 
             let pokedata = poke.data;
             console.log(pokedata);
