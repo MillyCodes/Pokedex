@@ -11,7 +11,10 @@ The website is available at https://millycodes.github.io/Pokedex/
 
 ##Images
 
-coming soon
+![pokedex1](https://github.com/MillyCodes/Pokedex/blob/master/img/pokedex1.png "Screenshot #1")
+
+![pokedex2](https://github.com/MillyCodes/Pokedex/blob/master/img/pokedex2.png "Screenshot #2")
+
 
 ## LEGAL
 
