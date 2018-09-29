@@ -9,7 +9,7 @@ A simple Pokédex displaying a trainer and his 3 Pokemon. This page was built to
 
 The website is available at https://millycodes.github.io/Pokedex/
 
-##Images
+## Images
 
 ![pokedex1](https://github.com/MillyCodes/Pokedex/blob/master/img/pokedex1.png "Screenshot #1")
 
