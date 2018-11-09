@@ -5,7 +5,7 @@ By [MillyCodes](https://github.com/MillyCodes)
 ## Description
 A simple Pokédex displaying a trainer and his 3 Pokemon. This page was built to practice front end web development skills. Built with Javascript utilizing OOP, functions and API calls, SASS, Bootstrap, Handlebars and the Pokemon API.
 
-## Information
+## HEROKU Deployment
 
 The website is available at https://millycodes.github.io/Pokedex/
 
